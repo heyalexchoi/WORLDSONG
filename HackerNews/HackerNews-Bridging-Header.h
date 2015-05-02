@@ -9,3 +9,4 @@
 #import <DateTools/DateTools.h>
 #import <SVPullToRefresh/SVPullToRefresh.h>
 #import <StreamingKit/STKAudioPlayer.h>
+#import <ArcGIS/ArcGIS.h>

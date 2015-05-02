@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (1.2.0)
+  - ArcGIS-Runtime-SDK-iOS (10.2.4)
   - Colours (5.6.2)
   - DateTools (1.5.0)
   - MBProgressHUD (0.9.1)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ArcGIS-Runtime-SDK-iOS
   - Colours
   - DateTools
   - MBProgressHUD
@@ -40,6 +42,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
+  ArcGIS-Runtime-SDK-iOS: 72a0bb049c2a151c8a23f46762db08266957006e
   Colours: 0afd4c3429656880fd4cff350ca3bf0ab86ca348
   DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
