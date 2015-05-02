@@ -12,12 +12,12 @@ import SwiftyJSON
 
 
 
-class HNAPIClient {
+class WSAPIClient {
     
-    let baseURLString = Constants.HNAPIBaseURLString
-    static let sharedClient = HNAPIClient()
+    let baseURLString = ""
+    static let sharedClient = WSAPIClient()
     let responseProcessingQueue = NSOperationQueue()
-    
+//    examples:::
     func getTopStories(limit: Int, offset: Int, completion: (stories: [Story]?, error: NSError?) -> Void) -> Request {
         return Alamofire
             .request(.GET, baseURLString + "/topstories", parameters: ["limit": limit, "offset": offset])
