@@ -18,7 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
-            window.rootViewController = UINavigationController(rootViewController: SongViewController())
+            
+            let listenNVC = UINavigationController(rootViewController: ListenViewController())
+            let recordNVC = UINavigationController(rootViewController: RecordViewController())
+            
+            let tabBarController = UITabBarController()
+            tabBarController.tabBar.tintColor = UIColor.purpleColor()
+            tabBarController.viewControllers = [listenNVC, recordNVC]
+            
+            window.rootViewController = tabBarController
             window.makeKeyAndVisible()
         }
         

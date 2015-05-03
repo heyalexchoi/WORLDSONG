@@ -13,7 +13,7 @@ extension UIColor {
     }
     
     class func backgroundColor() -> UIColor {
-        return UIColor.charcoalColor()
+        return UIColor.purpleColor()
     }
     
     class func separatorColor() -> UIColor {

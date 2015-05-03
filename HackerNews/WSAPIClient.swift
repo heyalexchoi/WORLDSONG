@@ -17,7 +17,7 @@ class WSAPIClient {
     let baseURLString = ""
     static let sharedClient = WSAPIClient()
     let responseProcessingQueue = NSOperationQueue()
-//    examples:::
+    //    examples:::
     func getTopStories(limit: Int, offset: Int, completion: (stories: [Story]?, error: NSError?) -> Void) -> Request {
         return Alamofire
             .request(.GET, baseURLString + "/topstories", parameters: ["limit": limit, "offset": offset])
@@ -44,6 +44,16 @@ class WSAPIClient {
                 } else if let json: AnyObject = json {
                     completion(story: Story(json: JSON(json)), error: nil)
                 }
+        }
+    }
+    
+    func uploadRecording(fileURL: NSURL, completion: () -> Void) {
+        Alamofire.upload(.POST, "http://httpbin.org/post", fileURL)
+            .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+                println(totalBytesWritten)
+            }
+            .responseJSON { (request, response, JSON, error) in
+                println(JSON)
         }
     }
     
